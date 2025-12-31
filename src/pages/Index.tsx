@@ -19,11 +19,11 @@ const Index = () => {
       <section className="relative py-12 px-4 text-center border-b border-border/30">
         <div className="container mx-auto max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Authentic Japanese
-            <span className="text-primary block mt-2">Ramen & More</span>
+            Ramen No 1
+            <span className="text-primary block mt-2">di Kaki Gunung Malabar</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
-            Crafted with tradition, served with passion. Experience the taste of Tokyo.
+            Ramen no Hena - Rasa autentik dengan cita rasa lokal yang menggugah selera.
           </p>
           
           {/* Search */}

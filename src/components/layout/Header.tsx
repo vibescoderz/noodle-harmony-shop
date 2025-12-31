@@ -19,9 +19,9 @@ export function Header() {
           </div>
           <div>
             <h1 className="font-display text-xl font-bold text-foreground">
-              Ichiban Ramen
+              Ramen no Hena
             </h1>
-            <p className="text-xs text-muted-foreground">一番ラーメン</p>
+            <p className="text-xs text-muted-foreground">ラーメンの店</p>
           </div>
         </Link>
       </div>
