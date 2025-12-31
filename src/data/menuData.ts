@@ -13,18 +13,18 @@ import matchaCakeImg from '@/assets/matcha-cheesecake.jpg';
 import ramuneImg from '@/assets/ramune.jpg';
 
 /**
- * Menu Data
+ * Menu Data - 100% HALAL
  * 
- * Contains all menu items for the ramen shop.
+ * All items are halal certified. No pork, no lard.
  * Categories: ramen, sides, drinks, desserts
  */
 export const menuItems: MenuItem[] = [
-  // Ramen
+  // Ramen (All Halal - Chicken/Beef based)
   {
-    id: 'tonkotsu-classic',
-    name: 'Tonkotsu Classic',
-    nameJp: '豚骨ラーメン',
-    description: 'Rich pork bone broth simmered for 18 hours, chashu pork, soft-boiled egg, bamboo shoots, and green onions.',
+    id: 'tori-paitan',
+    name: 'Tori Paitan Classic',
+    nameJp: '鶏白湯ラーメン',
+    description: 'Rich chicken bone broth simmered for 12 hours, chicken chashu, soft-boiled egg, bamboo shoots, and green onions.',
     price: 14.99,
     category: 'ramen',
     image: tonkotsuImg,
@@ -34,7 +34,7 @@ export const menuItems: MenuItem[] = [
     id: 'spicy-miso',
     name: 'Spicy Miso Ramen',
     nameJp: '辛味噌ラーメン',
-    description: 'Fermented soybean broth with ground pork, corn, butter, and our special chili oil blend.',
+    description: 'Fermented soybean broth with seasoned ground chicken, corn, butter, and our special chili oil blend.',
     price: 15.99,
     category: 'ramen',
     image: spicyMisoImg,
@@ -45,7 +45,7 @@ export const menuItems: MenuItem[] = [
     id: 'shoyu-ramen',
     name: 'Shoyu Ramen',
     nameJp: '醤油ラーメン',
-    description: 'Clear soy sauce based broth with chicken, menma, nori, and a perfectly seasoned soft egg.',
+    description: 'Clear soy sauce based broth with tender chicken, menma, nori, and a perfectly seasoned soft egg.',
     price: 13.99,
     category: 'ramen',
     image: shoyuImg,
@@ -54,7 +54,7 @@ export const menuItems: MenuItem[] = [
     id: 'tantanmen',
     name: 'Tantanmen',
     nameJp: '担々麺',
-    description: 'Creamy sesame broth with spicy ground pork, bok choy, and crispy chili flakes.',
+    description: 'Creamy sesame broth with spicy ground beef, bok choy, and crispy chili flakes.',
     price: 16.99,
     category: 'ramen',
     image: tantanmenImg,
@@ -71,21 +71,21 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 'black-garlic',
-    name: 'Black Garlic Tonkotsu',
-    nameJp: '黒にんにく豚骨',
-    description: 'Our classic tonkotsu elevated with aromatic black garlic oil and extra chashu.',
+    name: 'Black Garlic Chicken',
+    nameJp: '黒にんにく鶏ラーメン',
+    description: 'Our signature chicken broth elevated with aromatic black garlic oil and extra chicken chashu.',
     price: 17.99,
     category: 'ramen',
     image: blackGarlicImg,
     isPopular: true,
   },
   
-  // Sides
+  // Sides (All Halal)
   {
     id: 'gyoza',
-    name: 'Pork Gyoza',
-    nameJp: '餃子',
-    description: 'Six pan-fried dumplings filled with seasoned pork and vegetables.',
+    name: 'Chicken Gyoza',
+    nameJp: '鶏餃子',
+    description: 'Six pan-fried dumplings filled with seasoned halal chicken and vegetables.',
     price: 7.99,
     category: 'sides',
     image: gyozaImg,
@@ -95,7 +95,7 @@ export const menuItems: MenuItem[] = [
     id: 'karaage',
     name: 'Chicken Karaage',
     nameJp: '唐揚げ',
-    description: 'Japanese-style fried chicken with house-made mayo and lemon.',
+    description: 'Japanese-style fried chicken with house-made mayo and lemon. Halal certified.',
     price: 8.99,
     category: 'sides',
     image: karaageImg,
@@ -110,13 +110,13 @@ export const menuItems: MenuItem[] = [
     image: gyozaImg,
   },
   {
-    id: 'takoyaki',
-    name: 'Takoyaki',
-    nameJp: 'たこ焼き',
-    description: 'Six octopus balls with bonito flakes, mayo, and okonomiyaki sauce.',
-    price: 8.49,
+    id: 'beef-tataki',
+    name: 'Beef Tataki',
+    nameJp: 'ビーフたたき',
+    description: 'Seared halal beef slices with ponzu sauce and green onions.',
+    price: 9.49,
     category: 'sides',
-    image: gyozaImg,
+    image: karaageImg,
   },
   
   // Drinks
@@ -139,11 +139,11 @@ export const menuItems: MenuItem[] = [
     image: ramuneImg,
   },
   {
-    id: 'asahi',
-    name: 'Asahi Draft',
-    nameJp: 'アサヒビール',
-    description: 'Crisp Japanese lager, 12oz.',
-    price: 5.99,
+    id: 'es-teh',
+    name: 'Es Teh Manis',
+    nameJp: 'アイスティー',
+    description: 'Sweet Indonesian iced tea, refreshing and cold.',
+    price: 2.49,
     category: 'drinks',
     image: ramuneImg,
   },
@@ -153,7 +153,7 @@ export const menuItems: MenuItem[] = [
     id: 'mochi',
     name: 'Mochi Ice Cream',
     nameJp: 'もちアイス',
-    description: 'Three pieces of assorted mochi ice cream.',
+    description: 'Three pieces of assorted mochi ice cream. Halal certified.',
     price: 5.99,
     category: 'desserts',
     image: mochiImg,
@@ -162,7 +162,7 @@ export const menuItems: MenuItem[] = [
     id: 'matcha-cake',
     name: 'Matcha Cheesecake',
     nameJp: '抹茶チーズケーキ',
-    description: 'Creamy Japanese-style cheesecake with matcha swirl.',
+    description: 'Creamy Japanese-style cheesecake with matcha swirl. No gelatin.',
     price: 6.99,
     category: 'desserts',
     image: matchaCakeImg,
