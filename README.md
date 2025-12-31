@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# 🍜 Ichiban Ramen - Menu Shop
 
-## Project info
+A beautiful, modern ramen menu shop built with React, TypeScript, and a clean architecture approach.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **Menu Display**: Grid layout of menu items with images, prices, and descriptions
+- **Category Filtering**: Filter by ramen, sides, drinks, and desserts
+- **Search**: Real-time search across menu items
+- **Shopping Cart**: Add items, adjust quantities, view totals
+- **Checkout**: Form validation with Zod, order summary
+- **Responsive Design**: Mobile-first, works on all devices
+- **Animations**: Smooth transitions and micro-interactions
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Zustand** - State management
+- **Zod** - Schema validation
+- **Tailwind CSS** - Styling
+- **Shadcn/UI** - Component library
+- **React Hook Form** - Form handling
+- **Vitest** - Testing framework
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/              # Image assets
+├── components/
+│   ├── cart/            # Cart-related components
+│   │   ├── CartButton.tsx
+│   │   ├── CartItem.tsx
+│   │   └── CartSidebar.tsx
+│   ├── layout/          # Layout components
+│   │   └── Header.tsx
+│   ├── menu/            # Menu-related components
+│   │   ├── CategoryFilter.tsx
+│   │   ├── MenuGrid.tsx
+│   │   ├── MenuItem.tsx
+│   │   └── SearchBar.tsx
+│   └── ui/              # Shadcn UI components
+├── data/
+│   └── menuData.ts      # Menu items and categories
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+├── pages/
+│   ├── Index.tsx        # Main menu page
+│   ├── Checkout.tsx     # Checkout page
+│   └── NotFound.tsx     # 404 page
+├── schemas/
+│   ├── order.ts         # Zod validation schemas
+│   └── __tests__/       # Schema tests
+├── store/
+│   ├── cartStore.ts     # Cart state (Zustand)
+│   ├── menuStore.ts     # Menu filter state (Zustand)
+│   └── __tests__/       # Store tests
+└── types/
+    └── menu.ts          # TypeScript type definitions
 ```
 
-**Edit a file directly in GitHub**
+## Design System
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The app uses a custom design system with:
 
-**Use GitHub Codespaces**
+- **Color Palette**: Warm, cozy izakaya-inspired theme
+  - Dark backgrounds (like a ramen shop at night)
+  - Amber/orange accents (lantern glow)
+  - Soft red highlights (noren curtains)
+- **Typography**: 
+  - Display: Playfair Display
+  - Body: Noto Sans JP
+- **Components**: Custom Shadcn variants with glow effects
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Testing
 
-## What technologies are used for this project?
+Run tests with Vitest:
 
-This project is built with:
+```bash
+npm run test
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Test Coverage
 
-## How can I deploy this project?
+- **Cart Store Tests**: Add/remove items, quantity updates, totals
+- **Menu Store Tests**: Search queries, category filtering
+- **Order Schema Tests**: Form validation rules
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Usage
 
-## Can I connect a custom domain to my Lovable project?
+### Adding Items to Cart
 
-Yes, you can!
+```tsx
+import { useCartStore } from '@/store/cartStore';
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+const { addItem } = useCartStore();
+addItem(menuItem);
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Filtering Menu
+
+```tsx
+import { useMenuStore } from '@/store/menuStore';
+
+const { setSearchQuery, setSelectedCategory } = useMenuStore();
+setSearchQuery('tonkotsu');
+setSelectedCategory('ramen');
+```
+
+### Form Validation
+
+```tsx
+import { orderSchema } from '@/schemas/order';
+
+const result = orderSchema.safeParse(formData);
+if (result.success) {
+  // Process order
+}
+```
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+---
+
+**URL**: https://lovable.dev/projects/27164c13-2ee9-46bd-a296-b16b1a2da087
+
+Built with [Lovable](https://lovable.dev)

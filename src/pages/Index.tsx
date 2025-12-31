@@ -1,12 +1,52 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from '@/components/layout/Header';
+import { SearchBar } from '@/components/menu/SearchBar';
+import { CategoryFilter } from '@/components/menu/CategoryFilter';
+import { MenuGrid } from '@/components/menu/MenuGrid';
+import { CartButton } from '@/components/cart/CartButton';
+import { CartSidebar } from '@/components/cart/CartSidebar';
 
+/**
+ * Index Page - Main Menu
+ * 
+ * Displays the full ramen menu with search, filtering, and cart functionality.
+ */
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative py-12 px-4 text-center border-b border-border/30">
+        <div className="container mx-auto max-w-3xl">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Authentic Japanese
+            <span className="text-primary block mt-2">Ramen & More</span>
+          </h1>
+          <p className="text-lg text-muted-foreground mb-8">
+            Crafted with tradition, served with passion. Experience the taste of Tokyo.
+          </p>
+          
+          {/* Search */}
+          <div className="flex justify-center">
+            <SearchBar />
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Section */}
+      <main className="container mx-auto px-4 py-8">
+        {/* Category Filter */}
+        <div className="mb-8">
+          <CategoryFilter />
+        </div>
+
+        {/* Menu Grid */}
+        <MenuGrid />
+      </main>
+
+      {/* Cart */}
+      <CartButton />
+      <CartSidebar />
     </div>
   );
 };
