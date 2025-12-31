@@ -18,6 +18,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative py-12 px-4 text-center border-b border-border/30">
         <div className="container mx-auto max-w-3xl">
+          <p className="text-sm font-medium text-primary mb-2">100% HALAL - No Pork, No Lard</p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Ramen No 1
             <span className="text-primary block mt-2">di Kaki Gunung Malabar</span>
